@@ -1,4 +1,4 @@
-resource "google_compute_instance" "web" {
+/* resource "google_compute_instance" "web" {
   name         = "web"
   machine_type = "e2-small"
   zone         = "us-central1-a"
@@ -20,4 +20,4 @@ resource "google_compute_instance" "web" {
   }
 
   metadata_startup_script = "apt update; apt install -y nginx"
-}
+} */

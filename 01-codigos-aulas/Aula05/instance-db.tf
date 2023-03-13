@@ -1,4 +1,4 @@
-resource "google_compute_instance" "db" {
+/* resource "google_compute_instance" "db" {
   name         = "db"
   machine_type = "e2-small"
   zone         = "us-central1-a"
@@ -16,4 +16,4 @@ resource "google_compute_instance" "db" {
   network_interface {
     subnetwork = "subnet1"
   }
-}
+} */
