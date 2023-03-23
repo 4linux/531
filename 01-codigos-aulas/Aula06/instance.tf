@@ -9,8 +9,12 @@ resource "google_compute_instance" "web" {
     }
   }
 
+  attached_disk {
+    source = "db-disk"
+  }
+
   network_interface {
-    network = "vpc-terraform"
+    subnetwork = "subnet1"
 
     access_config {
       // Ephemeral public IP
