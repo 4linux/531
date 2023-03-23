@@ -8,7 +8,7 @@ Para cada laboratório, crie um novo diretório.
 
 Aproveite parar fazer seus testes, todo novo atributo que for criado, faça sempre o `terraform validate`, `terraform plan` para verificar a saída no output.
 
-Quanto solicitado execute o `terraform apply` com o parâmetro 
+Quanto solicitado execute o `terraform apply` com o parâmetro `-target`.
 
 Caso haja qualquer erro, leia atentamente o terminal.
 
