@@ -14,7 +14,7 @@ Caso haja qualquer erro, leia atentamente o terminal.
 
 1. Inicialize o provider.
 
-2. Crie o código de uma rede no **modo auto** (as subredes devem ser criadas automaticamente) com o nome **vpc-lab02**, mas **não aplique as alterações**, execute apenas o validate e verifique o plano de execução.
+2. Crie o código de uma rede no **modo auto** (as subredes devem ser criadas automaticamente) com o nome **vpc-lab02**, mas **não aplique as alterações**, execute apenas o `validate` e verifique o plano de execução.
 
 3. Crie o código para uma regra de firewall para a **vpc-lab02**, liberando apenas a **porta 22** e o protocolo icmp, novamente **não aplique**, execute apenas o `validate` e verifique o plano de execução:
 - Dados sugeridos:
