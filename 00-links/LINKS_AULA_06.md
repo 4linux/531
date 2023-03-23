@@ -6,7 +6,7 @@ Um dos sub-comandos para o comando `terraform plan/apply/destroy` e o `-target`.
 O comando tem a seguinte sintaxe:
 
 ```sh
-terraform <ação> -target=recurso.nome_do_recurso
+terraform <ação> -target=recurso.nome_do_recurso <-auto-approve>
 ```
 
 Exemplo:
@@ -23,7 +23,7 @@ terraform apply -target=google_compute_network.vpc_network
 
 3. destroy
 ```sh
-terraform plan -target=google_compute_network.vpc_network
+terraform destroy -target=google_compute_network.vpc_network
 ```
 
 ---
