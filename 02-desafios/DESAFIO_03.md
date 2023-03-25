@@ -1,21 +1,6 @@
-#### TRABALHANDO COM DEPENDÊNCIAS
+# Desafio 03
 
-No terraform podemos criar dependências implicitas ou explicitas.
-
-As dependências implicitas são criadas quando no código de um recurso fazemos referência a outro recurso conhecido da infraestrutura.
-
-Dependencias explicitas são criadas com o uso do Meta-Argumento `depends_on`
-
-#### DOC DE REFERÊNCIA TERRAFORM
-
-1. [HCL Reference Configuration](https://www.terraform.io/docs/language/syntax/configuration.html "HCL Reference Configuration")
-2. [depends_on](https://www.terraform.io/language/meta-arguments/depends_on "depends_on")
-3. [Compute Instance - Attached Disk](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance#nested_attached_disk "Attached Disk")
-
----
-#### Practice Labs - Lab 03: 
-
-Trabalhando com dependências
+## Trabalhando com dependências
 
 Instruções:
 
