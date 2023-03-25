@@ -10,6 +10,16 @@ resource "google_compute_instance" "web" {
   }
 
   network_interface {
-    subnetwork = google_compute_subnetwork.subnet1.name
+    subnetwork = google_compute_subnetwork.subnet1.self_link
+
+    access_config {
+      // Ephemeral public IP
+    }
   }
+
+  depends_on = [
+    google_compute_instance.db,
+    google_compute_firewall.allow-default
+  ]
+
 }
