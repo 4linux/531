@@ -10,10 +10,12 @@ resource "google_compute_instance" "vm" {
   }
 
   network_interface {
-    subnetwork = google_compute_subnetwork.subnet1.self_link
+    subnetwork = "default"
 
     access_config {
       // Ephemeral public IP
     }
   }
+
+  metadata_startup_script = "apt update; apt install -y nginx"
 }
