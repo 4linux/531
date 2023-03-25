@@ -1,7 +1,7 @@
 resource "google_compute_instance" "db" {
   name         = "db"
   machine_type = "e2-small"
-  zone         = "us-central1-a"
+  zone         = google_compute_disk.db-disk.zone
 
   boot_disk {
     initialize_params {
