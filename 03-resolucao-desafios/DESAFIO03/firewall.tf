@@ -9,7 +9,7 @@ resource "google_compute_firewall" "allow-ssh" {
 
   source_ranges = ["0.0.0.0/0"]
 
-  disabled = true
+  /* disabled = true */
 }
 
 resource "google_compute_firewall" "allow-default-ports" {
