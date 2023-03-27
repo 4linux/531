@@ -16,9 +16,3 @@ Quando se trabalha em times, backends serão gravados remotamente e protegidos c
 
 1. [Google Cloud Storage](https://cloud.google.com/storage/docs "Google Cloud Storage")
 2. [Storage Locations](https://cloud.google.com/storage/docs/locations "Storage Locations")
-
-
-#### DOC DE REFERÊNCIA
-
-1. [Criando e Usando Modulos Locais](https://learn.hashicorp.com/tutorials/terraform/module-create?in=terraform/modules "Criando e Usando Modulos Locais")
-2. [terraform-docs](https://terraform-docs.io/ "terraform-docs")
