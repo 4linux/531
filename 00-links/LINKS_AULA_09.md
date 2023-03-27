@@ -13,7 +13,8 @@ O Google Cloud Storage é um serviço de armazenamento em nuvem pública que per
 
 #### DOC DE REFERÊNCIA TERRAFORM
 
-1. [Backends](https://www.terraform.io/language/settings/backends/configuration "Backends")
-2. [Google Storage Bucket](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket "Google Storage Bucket")
-3. [Manipulating State](https://www.terraform.io/cli/state "Manipulating State")
-4. [Importing Infrastructure](https://www.terraform.io/cli/import "Importing Infrastructure")
+- [Backends](https://www.terraform.io/language/settings/backends/configuration "Backends")
+- [State Locking](https://developer.hashicorp.com/terraform/language/state/locking "State Locking")
+- [Google Storage Bucket](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket "Google Storage Bucket")
+- [Manipulating State](https://www.terraform.io/cli/state "Manipulating State")
+- [Importing Infrastructure](https://www.terraform.io/cli/import "Importing Infrastructure")
