@@ -1,5 +1,10 @@
 #### DOC DE REFERÊNCIA
 
+1. [Criando e Usando Modulos Locais](https://learn.hashicorp.com/tutorials/terraform/module-create?in=terraform/modules "Criando e Usando Modulos Locais")
+2. [terraform-docs](https://terraform-docs.io/ "terraform-docs")
+
+#### DOC DE REFERÊNCIA
+
 1. [GCP Network Module](https://registry.terraform.io/modules/terraform-google-modules/network "GCP Network Module")
 2. [Module Sources](https://www.terraform.io/language/modules/sources "Module Sources")
 ---
