@@ -5,6 +5,12 @@ terraform {
       version = "4.55.0"
     }
   }
+
+  /* backend "gcs" {
+    credentials = "/Users/anderson/Documents/credenciais-gcp/terraform-lab-378618-e771177c51d7.json"
+    bucket  = "treina-4linux-trfm-state"
+    prefix  = "dev"
+  } */
 }
 
 provider "google" {
