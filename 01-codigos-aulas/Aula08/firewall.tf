@@ -1,11 +1,16 @@
-/* resource "google_compute_firewall" "allow-http" {
+resource "google_compute_firewall" "default-allow-http" {
   name    = "default-allow-http"
   network = "default"
 
-  allow {
-    protocol = "tcp"
-    ports    = ["80","8080"]
-  }
+    source_ranges           = [
+        "0.0.0.0/0",
+    ]
 
-  source_ranges = ["0.0.0.0/0"]
-}  */
+    allow {
+        ports    = [
+            "80",
+            "8080",
+        ]
+        protocol = "tcp"
+    }
+}
