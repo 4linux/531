@@ -8,7 +8,7 @@ terraform {
 
   /* backend "gcs" {
     credentials = "/Users/anderson/Documents/credenciais-gcp/terraform-lab-378618-e771177c51d7.json"
-    bucket  = "treina-4linux-trfm-state"
+    bucket  = "treina-4linux-desafio04-abs"
     prefix  = "dev"
   } */
 }
