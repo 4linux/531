@@ -1,4 +1,4 @@
-resource "google_compute_firewall" "allow-http-lab04" {
+/* resource "google_compute_firewall" "allow-http-lab04" {
   name    = "allow-http-lab04"
   network = "default"
 
@@ -8,4 +8,4 @@ resource "google_compute_firewall" "allow-http-lab04" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-}
+} */

@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "treina-4linux-trfm-state" {
+resource "google_storage_bucket" "treina-4linux-desafio04-abs" {
   name     = "treina-4linux-desafio04-abs"
   location = "US-CENTRAL1"
 
