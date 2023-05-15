@@ -8,6 +8,7 @@ Outputs no Terraform são valores que seu código Terraform expõe para que poss
 
 #### DOC DE REFERÊNCIA TERRAFORM
 
+- [HCL Reference - Values](https://developer.hashicorp.com/terraform/language/values "HCL Reference - Local Values")
 - [HCL Reference - Local Values](https://www.terraform.io/language/values/locals "HCL Reference - Local Values")
 - [HCL Reference - Variables](https://www.terraform.io/language/values/variables "HCL Reference - Variables")
 - [HCL Reference - Primitive Types](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#primitive-types "HCL Reference - Primitive Types")
