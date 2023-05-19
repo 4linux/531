@@ -38,13 +38,13 @@ variable "default_vm_image" {
 }
 
 variable "default_vm_size" {
-  description = "Sistema operacional das vms"
+  description = "Tamanho padrão das vms"
   type        = string
   default     = "e2-small"
 }
 
 variable "db_vm_name" {
-  description = "Sistema operacional das vms"
+  description = "Nome para o db server"
   type        = string
   default     = "db-server"
 }
@@ -70,4 +70,24 @@ variable "db_disk_size" {
     condition     = var.db_disk_size <= 50
     error_message = "Tamanho máximo do disco de dados é de 50GB"
   }
+}
+
+variable "web_vm_name" {
+  description = "Nome para a vm web"
+  type        = string
+  default     = "db-server"
+}
+
+variable "web_vm_zone" {
+  description = "Nome para a vm web"
+  type        = string
+  default     = "us-central1-c"
+}
+
+variable "web_provision_command" {
+  default = "apt update; apt install -y nginx"
+}
+
+variable "web_provision_script" {
+  default = "./scripts/prov-back.sh"
 }
