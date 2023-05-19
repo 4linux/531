@@ -1,6 +1,6 @@
 #definicoes de rede
 
-variable "rede_gerenciada" {
+variable "vpc_gerenciada" {
   type = bool
 }
 
@@ -28,6 +28,10 @@ variable "subnet2_region" {
   type    = string
   default = "southamerica-east1"
 }
+
+
+
+
 
 #definicoes de instancias
 
