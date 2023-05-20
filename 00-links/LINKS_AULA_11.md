@@ -9,10 +9,10 @@ Outputs no Terraform são valores que seu código Terraform expõe para que poss
 #### DOC DE REFERÊNCIA TERRAFORM
 - [HCL Reference - Data Sources](https://developer.hashicorp.com/terraform/language/data-sources "HCL Reference - Data Sources")
 - [HCL Tutorials - Query Data Sources](https://developer.hashicorp.com/terraform/tutorials/configuration-language/data-sources "HCL Tutorials - Query Data Sources")
+- [HCL Reference - Functions - Format](https://www.terraform.io/language/functions/format "HCL Reference - Functions - Format")
 - https://developer.hashicorp.com/terraform/language/meta-arguments/count
 - [HCL Reference - Values](https://developer.hashicorp.com/terraform/language/values "HCL Reference - Local Values")
 - [HCL Reference - Variables](https://www.terraform.io/language/values/variables "HCL Reference - Variables")
 - [HCL Reference - Primitive Types](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#complex-types "HCL Reference - Primitive Types")
 - [HCL Reference - Operators](https://developer.hashicorp.com/terraform/language/expressions/operators "HCL Reference - Operators")
 - [HCL Reference - Outputs](https://www.terraform.io/language/values/outputs "HCL Reference - Outputs")
-- [HCL Reference - Functions - File](https://www.terraform.io/language/functions/file "HCL Reference - Functions - File")
