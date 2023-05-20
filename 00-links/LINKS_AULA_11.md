@@ -4,13 +4,15 @@ Local Values no Terraform são variáveis ​​locais que permitem que você ar
 
 Variáveis no Terraform são usadas para fornecer valores de entrada para o seu código. Elas podem ser definidas em um arquivo separado, passadas como argumentos na linha de comando ou definidas dentro do arquivo de configuração. As variáveis ​​podem ter tipos definidos, como string, número ou lista, e podem ser usadas em expressões dentro do seu código Terraform.
 
-Outputs no Terraform são valores que seu código Terraform expõe para que possam ser consumidos por outros sistemas. Eles geralmente representam informações importantes sobre o ambiente que o Terraform criou, como endereços IP ou nomes de domínio. Você pode definir um output para qualquer valor que desejar expor e, em seguida, referenciar esse valor em outro código Terraform ou em scripts externos. O Terraform garantirá que o valor do output esteja disponível após a criação do ambiente.
+Um tipo complexo é um tipo que agrupa vários valores em um único valor. Existem duas categorias de tipos complexos: tipos de coleção (para agrupar valores semelhantes) e tipos estruturais (para agrupar valores potencialmente diferentes).
 
 #### DOC DE REFERÊNCIA TERRAFORM
 - [HCL Reference - Data Sources](https://developer.hashicorp.com/terraform/language/data-sources "HCL Reference - Data Sources")
 - [HCL Tutorials - Query Data Sources](https://developer.hashicorp.com/terraform/tutorials/configuration-language/data-sources "HCL Tutorials - Query Data Sources")
 - [HCL Reference - Functions - Format](https://www.terraform.io/language/functions/format "HCL Reference - Functions - Format")
+- [HCL Reference - Functions - Length](https://www.terraform.io/language/functions/length "HCL Reference - Functions - Length")
 - [HCL Reference - Resources](https://developer.hashicorp.com/terraform/language/resources "HCL Reference - Resources")
 - [HCL Reference - Meta-Arguments - Count](https://developer.hashicorp.com/terraform/language/meta-arguments/count "HCL Reference - Meta-Arguments - Count")
+- [HCL Reference - Types](https://developer.hashicorp.com/terraform/language/expressions/types#types "HCL Reference - Types")
 - [HCL Reference - Complex Types](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#complex-types "HCL Reference - Complex Types")
 
