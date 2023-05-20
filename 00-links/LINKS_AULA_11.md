@@ -1,46 +1,16 @@
-#### DOC DE REFERÊNCIA
+# Variabels + Outputs
 
-1. [GCP Network Module](https://registry.terraform.io/modules/terraform-google-modules/network "GCP Network Module")
-2. [Module Sources](https://www.terraform.io/language/modules/sources "Module Sources")
----
+Local Values no Terraform são variáveis ​​locais que permitem que você armazene valores intermediários e os utilize em vários locais do seu código Terraform, evitando repetições desnecessárias de código. Você pode definir uma expressão para um local value, que pode incluir referências a outras variáveis ​​ou recursos, e o Terraform garantirá que essa expressão seja avaliada corretamente.
 
-### Practice Labs - Lab 10
+Variáveis no Terraform são usadas para fornecer valores de entrada para o seu código. Elas podem ser definidas em um arquivo separado, passadas como argumentos na linha de comando ou definidas dentro do arquivo de configuração. As variáveis ​​podem ter tipos definidos, como string, número ou lista, e podem ser usadas em expressões dentro do seu código Terraform.
 
-Criando e usando módulos locais
+Outputs no Terraform são valores que seu código Terraform expõe para que possam ser consumidos por outros sistemas. Eles geralmente representam informações importantes sobre o ambiente que o Terraform criou, como endereços IP ou nomes de domínio. Você pode definir um output para qualquer valor que desejar expor e, em seguida, referenciar esse valor em outro código Terraform ou em scripts externos. O Terraform garantirá que o valor do output esteja disponível após a criação do ambiente.
 
-Instruções:
+#### DOC DE REFERÊNCIA TERRAFORM
 
-Para cada laboratório, crie um novo diretório. Caso haja qualquer erro, leia atentamente o terminal.
-
-Utilize referências implicitas e explicitas sempre que necessário.
-
-Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempre o `terraform validate`, `terraform plan` para verificar a saída no output.
-
-Sempre que necessário e possível utilize variáveis e estruras de laço para armazenar
-
-1. Crie um novo diretorio LAB10 e copie o arquivo provider.tf para esse diretório
-
-#### Consumindo um módulo de rede
-
-2. Crie uma VPC não gerenciada e duas subnets consumindo o modulo publico oficial da GCP no registry do terraform.
-- Crie as subnets com o mesmo nome da VPC para simplificar a implementação.
-- Cria as subnets nas regioes **us-central1** e **us-east1**
-- Definas as faixas **10.10.10.0/24** e **10.10.20.0/24** para as subnets, respectivamente.
-
-3. Consuma e exiba a saídas dos self_link, da VPC e das subnets.
-
-4. Crie uma regra de firewall liberando o protocolo icmp e a porta tcp/22 e 80 e associe a regra a VPC criada. A idéia é testar a interação entre módulos e recusos então crie a regra de firewall utilizando o *resource* `google_compute_firewall` fazendo o link com a VPC criada.
-
-#### Consumindo um módulo de intance
-
-5. Crie uma instâncias na subnet criada no item anterior consumindo o módulo de instancia que criamos no LAB08
-
-6. **Valide**, **Planeje** e **Aplique** as configuração alteradas/criadas até aqui, observe se os elementos foram criados na ordem correta obedecendo as dependências definidas.
-
-9. Valide que a infra foi criada com sucesso.
-
-10. Destrua a infra.
-
-`
-Obs: lembre-se de ao final destruir sua infraestrutura por questões de billing e manutenção sadia da sua free tier.
-`
+- [HCL Reference - Values](https://developer.hashicorp.com/terraform/language/values "HCL Reference - Local Values")
+- [HCL Reference - Variables](https://www.terraform.io/language/values/variables "HCL Reference - Variables")
+- [HCL Reference - Primitive Types](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#complex-types "HCL Reference - Primitive Types")
+- [HCL Reference - Operators](https://developer.hashicorp.com/terraform/language/expressions/operators "HCL Reference - Operators")
+- [HCL Reference - Outputs](https://www.terraform.io/language/values/outputs "HCL Reference - Outputs")
+- [HCL Reference - Functions - File](https://www.terraform.io/language/functions/file "HCL Reference - Functions - File")
