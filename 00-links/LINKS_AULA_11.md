@@ -1,8 +1,10 @@
 # Data-Sources + Meta-Arguments + Functions + Complex Types
 
-Local Values no Terraform são variáveis ​​locais que permitem que você armazene valores intermediários e os utilize em vários locais do seu código Terraform, evitando repetições desnecessárias de código. Você pode definir uma expressão para um local value, que pode incluir referências a outras variáveis ​​ou recursos, e o Terraform garantirá que essa expressão seja avaliada corretamente.
+`Data Sources` permitem que o Terraform use informações definidas fora do Terraform, definidas por outra configuração separada do Terraform ou modificadas por funções.
 
-Variáveis no Terraform são usadas para fornecer valores de entrada para o seu código. Elas podem ser definidas em um arquivo separado, passadas como argumentos na linha de comando ou definidas dentro do arquivo de configuração. As variáveis ​​podem ter tipos definidos, como string, número ou lista, e podem ser usadas em expressões dentro do seu código Terraform.
+Recursos são o elemento mais importante na linguagem Terraform. Cada bloco de recurso descreve um ou mais objetos de infraestrutura. Os `Meta-Arguments` são argumentos especiais que podem ser usados com cada tipo de recurso, durante essa aula vamos tratar especificamente de dois meta-argumentos: `count` e `for_each`.
+
+A linguagem Terraform inclui várias funções integradas que você pode chamar de dentro de expressões para transformar e combinar valores. A sintaxe geral para chamadas de função é um nome de função seguido por argumentos separados por vírgula entre parênteses.
 
 Um tipo complexo é um tipo que agrupa vários valores em um único valor. Existem duas categorias de tipos complexos: tipos de coleção (para agrupar valores semelhantes) e tipos estruturais (para agrupar valores potencialmente diferentes).
 
