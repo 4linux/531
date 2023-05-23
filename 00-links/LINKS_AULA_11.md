@@ -11,6 +11,8 @@ Um tipo complexo é um tipo que agrupa vários valores em um único valor. Exist
 #### DOC DE REFERÊNCIA TERRAFORM
 - [HCL Reference - Data Sources](https://developer.hashicorp.com/terraform/language/data-sources "HCL Reference - Data Sources")
 - [HCL Tutorials - Query Data Sources](https://developer.hashicorp.com/terraform/tutorials/configuration-language/data-sources "HCL Tutorials - Query Data Sources")
+- [Data Sources - Google Compute Network](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_network "Data Sources - Google Compute Network") 
+- [Data Sources - Google Compute Disk](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_disk "Data Sources - Google Compute Disk")
 - [HCL Reference - Functions - Format](https://www.terraform.io/language/functions/format "HCL Reference - Functions - Format")
 - [HCL Reference - Functions - Length](https://www.terraform.io/language/functions/length "HCL Reference - Functions - Length")
 - [HCL Reference - Resources](https://developer.hashicorp.com/terraform/language/resources "HCL Reference - Resources")
