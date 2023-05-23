@@ -3,12 +3,13 @@
 variable "auto_create_subnets" {
   description = "Define se a subnets devem ser criadas automaticamente"
   type        = bool
+  default = true
 }
 
 variable "vpc_name" {
   description = "Nome da vpc"
   type        = string
-  default     = "terraform"
+  default     = "terraform-lab-aula11"
 }
 
 variable "subnet_name" {
@@ -58,7 +59,7 @@ variable "db_vm_name" {
 variable "web_vm_name" {
   description = "Nome para a vm web"
   type        = string
-  default     = "web1"
+  default     = "web"
 }
 
 variable "web_vm_zone" {
