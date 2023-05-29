@@ -10,5 +10,5 @@ Os dados persistentes armazenados no back-end pertencem a um espaço de trabalho
 #### DOC DE REFERÊNCIA TERRAFORM
 
 - [HCL Reference - Workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces#workspaces "HCL Reference - Workspaces")
+- [HCL Reference - conditionals](https://developer.hashicorp.com/terraform/language/expressions/conditionals "HCL Reference - conditionals")
 - [Cloud Docs - Workspaces](https://developer.hashicorp.com/terraform/cloud-docs/workspaces "Cloud Docs - Workspaces")
-- [HCL Reference - conditionals](https://developer.hashicorp.com/terraform/language/expressions/conditionals "HCL Reference - Functions - Format")
