@@ -1,8 +1,13 @@
 resource "google_compute_instance" "web" {
 
-  name         = format("%s-%s-%s", var.web_vm_name, data.google_compute_network.terraform_lab_aula11.name, var.web_vm_zone)
+  count = length(var.web_vm_zones)
+
+  // exemplo uso do format pra definir o nome:
+  //name         = format("%s-%s-%s", var.web_vm_name, count.index, data.google_compute_network.terraform_lab_aula11.name)
+
+  name         = var.web_vm_names[count.index]
   machine_type = var.default_vm_size
-  zone         = var.web_vm_zone
+  zone         = var.web_vm_zones[count.index]
 
   boot_disk {
     initialize_params {
