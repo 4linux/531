@@ -20,9 +20,9 @@ Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempr
 
 #### Preparando a Rede
 
-**- Na primeira parte** serão alterados as configurações do ambiente de network, para o uso de funções e variáveis complexas. Todas as demais definições de referenciamento, zonas e ips devem permanecer as mesmas do LAB03.
+**- Na primeira parte** serão alterados as configurações do ambiente de network, para o uso de funções e variáveis complexas. Todas as demais definições de referenciamento, zonas e ips devem permanecer as mesmas do DESAFIO03.
 
-1. Crie um novo diretório com o nome LAB06.
+1. Crie um novo diretório com o nome DESAFIO06.
 
 2. Defina uma vpc não gerenciada, utilize variáveis para o nome da vpc e para o valor booleano que define a subrede como não gerenciada.
 
@@ -60,7 +60,7 @@ Como iremos usar um load balancer no nginx os nomes dos instâncias precisam ser
 - Use variáveis do tipo lista para armazenar os nomes e as zonas onde as instâncias devem ser provisionadas:
     - Nomes das instâncias: **webback1**, **webback2**. 
     - Zonas das instâncias: **us-east1-b** e **us-east1-c**
-- Use o script de `prov-bach.sh` para provisionar automáticamente o nginx nas instâncias de backend durante a criação.
+- Use o script de `prov-back.sh` para provisionar automáticamente o nginx nas instâncias de backend durante a criação.
 - Adicione o seguinte trecho a definição das instâncias de backend `metadata = { VmDnsSetting = "GlobalDefault" }`. (Este trecho vai possibilitar que as intâncias de backend sejam accessíveis pelo seus nomes independentemente da região ou da zona onde forem provisionadas)
 - Use o seguinte trecho de código para referenciar a subnet: `subnetwork = google_compute_subnetwork.modelo-subnets[0].self_link`
 
