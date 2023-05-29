@@ -14,7 +14,7 @@ Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempr
 
 #### Trabalhando com workspaces
 
-1. Crie um novo diretorio LAB08 e copie o arquivo de `provider` para esse diretório
+1. Crie um novo diretorio DESAFIO07 e copie o arquivo de `provider` para esse diretório
 
 2. Crie um workspace com o nome prod.
 
@@ -28,7 +28,7 @@ Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempr
 
 6. Aplique a configuração para criar o ambiente de dev.
 
-7. Valide via console que os recursos (vpc, subnet e rede) estão duplicados, com as devidas identificações dos ambientes.
+7. Valide via console que os recursos (vpc, subnet e firewall) estão duplicados, com as devidas identificações dos ambientes.
 
 8. Destrua a infra criada no workspace de DEV.
 
