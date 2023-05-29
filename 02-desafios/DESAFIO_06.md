@@ -1,8 +1,6 @@
-https://cloud.google.com/compute/docs/internal-dns#disabling-zonal-dns
+# Desafio 06: 
 
-### Practice Labs - Lab 06: 
-
-Trabalhando com variáveis "complexas"
+## Trabalhando com variáveis "complexas"
 
 Instruções:
 
