@@ -6,8 +6,8 @@ De muitas maneiras, os módulos Terraform são semelhantes aos conceitos de bibl
 
 #### DOC DE REFERÊNCIA TERRAFORM
 
-https://developer.hashicorp.com/terraform/language/modules/develop
-https://developer.hashicorp.com/terraform/tutorials/modules/module
+- [Visão Geral de Módulos](https://developer.hashicorp.com/terraform/tutorials/modules/module "Visão Geral de Módulos")
+- [Criando Módulos](https://developer.hashicorp.com/terraform/language/modules/develop "Criando Módulos")
 https://developer.hashicorp.com/terraform/tutorials/modules/pattern-module-creation
 - [Criando e Usando Modulos Locais](https://learn.hashicorp.com/tutorials/terraform/module-create?in=terraform/modules "Criando e Usando Modulos Locais")
 
