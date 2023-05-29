@@ -1,9 +1,9 @@
 variable "vpc_name" {
-    type = string
-    default = "vpc-workspace"
+  type    = string
+  default = "vpc-workspace"
 }
 
 variable "vm_name" {
-    type = string
-    default = "vm-teste"
+  type    = string
+  default = "vm-web"
 }

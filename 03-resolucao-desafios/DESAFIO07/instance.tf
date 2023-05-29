@@ -1,6 +1,6 @@
 resource "google_compute_instance" "vm1" {
 
-  count = "${terraform.workspace == "prod" ? 2 : 1}"
+  count = terraform.workspace == "prod" ? 2 : 1
 
   name = format("%s-%s-%s", var.vm_name, count.index, terraform.workspace)
 
