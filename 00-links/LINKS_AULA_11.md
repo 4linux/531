@@ -8,6 +8,10 @@ A linguagem Terraform inclui várias funções integradas que você pode chamar 
 
 Um tipo complexo é um tipo que agrupa vários valores em um único valor. Existem duas categorias de tipos complexos: tipos de coleção (para agrupar valores semelhantes) e tipos estruturais (para agrupar valores potencialmente diferentes).
 
+#### DOC DE REFERÊNCIA GCP
+
+- [Google Cloud Reference - Internal DNS](https://cloud.google.com/compute/docs/internal-dns#disabling-zonal-dns "Google Cloud Reference - Internal DNS")
+
 #### DOC DE REFERÊNCIA TERRAFORM
 - [HCL Reference - Data Sources](https://developer.hashicorp.com/terraform/language/data-sources "HCL Reference - Data Sources")
 - [HCL Tutorials - Query Data Sources](https://developer.hashicorp.com/terraform/tutorials/configuration-language/data-sources "HCL Tutorials - Query Data Sources")
