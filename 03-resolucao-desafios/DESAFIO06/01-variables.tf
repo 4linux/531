@@ -25,6 +25,14 @@ variable "subnets_cidr" {
   default = ["192.168.10.0/24", "192.168.20.0/24"]
 }
 
+
+
+
+
+
+
+
+
 // variaveis da parte 2 (processamento)
 
 variable "default_machine_type" {
