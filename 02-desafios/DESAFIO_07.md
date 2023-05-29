@@ -1,6 +1,6 @@
-### Practice Labs - Lab 07
+# Desafio 07:
 
-Project Time 01
+## Utilizando worksapces
 
 Instruções:
 
@@ -10,36 +10,35 @@ Utilize referências implicitas e explicitas sempre que necessário.
 
 A idéia durante o laboratório é criarmos a estrutura inicial do nosso projeto final, que basicamente vai definir uma nova rede, um modelo de instância e os instances groups.
 
-Para agilizar a execução do LAB procure sempre reaproveitar códigos já escritos nos anteriores. Sempre que possível utilize variáveis e Meta-Arguments (`count` ou `for_each`) para automatizar e generalizar o código.
-
 Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempre o `terraform validate`, `terraform plan` para verificar a saída no output.
 
-#### Preparando a primeira parte do projeto.
+#### Trabalhando com workspaces
 
-**- Na primeira parte** será criada a estrutura básica para comportar nossos ambientes as configurações do ambiente de network e firewall.
+1. Crie um novo diretorio LAB08 e copie o arquivo de `provider` para esse diretório
 
-1. Crie um novo diretório com o nome PROJETOFINAL.
+2. Crie um workspace com o nome prod.
 
-2. Defina uma vpc auto (criar redes automáticamente).
+3. Crie as definições de uma vpc nao gerenciada, uma subnet, uma regra de firewall e uma instancia com as devidas alterações para uso dos workspaces.
 
-3. Crie uma regra de firewall com o nome 'allow-default-ports' liberando o protocolo icmp e as portas TCP 22, 80, 443 para 0.0.0.0/0, para a VPC criada. Aplique uma **target_tag** com o nome `webapps`.
+`Para a workspace de prod devem ser criadas 2 instâncias para qualquer outro, deve ser criado apenas uma instância.`
 
-**- Na segunda parte** serão criadas as definições de modelos de instância e de grupos de instâncias.
+4. Crie um novo workspace dev.
 
-4. Crie um instance template para ser utilizado no provisionamento das VMs (Dica: verifique a documentação do recurso `google_compute_instance_template`)
-- Defina que as VMs do template usem a rede gerenciada criado no passo 2.
-- Lembre-se de definir a TAG para que a regra de firewall seja aplicada;
-- Use a imagem `debian-cloud/debian-11`;
-- Aplique ao template o `metadata-startup-script` usando o script de provisionamento de backends;
-- Habilite o ip publico no template;
+5. Valide via terraform state list que o estado do ambiente dev está vazio.
 
-5. Crie 3 instance groups, nas regiões `us-central1`, `us-east1` e `soutamerica-east1`, defina o **target_size** de cada instance group para **2** de modo que duas instâncias sejam criadas distribuídas entre as zonas de cada região.
+6. Aplique a configuração para criar o ambiente de dev.
 
-6. **Valide**, **Planeje** e **Aplique** as configuração alteradas/criadas até aqui, observe se os elementos foram criados na ordem correta obedecendo as dependências definidas.
+7. Valide via console que os recursos (vpc, subnet e rede) estão duplicados, com as devidas identificações dos ambientes.
 
-7. Via console acesse o endereço do ip público de cada instancia e confirme que o script de provisionamento, que faz o deploy de um index.html customizado foi aplicado com sucesso.
+8. Destrua a infra criada no workspace de DEV.
 
-8. Destrua todo o ambiente e valide que todos os elementos foram removidos via validação do state e também via console.
+9. Valide via terraform state e via console que o ambiente foi destruído.
+
+10. Alterne para a workspace de prod, valide via `state list` que a infra ainda exite.
+
+11. Destrua a infra de prod.
+
+12. Alterne para a workspace default e remova as workspaces de dev e de prod.
 
 `
 Obs: lembre-se de ao final destruir sua infraestrutura por questões de billing e manutenção sadia da sua free tier.
