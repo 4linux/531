@@ -1,6 +1,9 @@
 resource "google_compute_instance" "web" {
-  name         = "web"
-  machine_type = "e2-small"
+
+  count = terraform.workspace == "prod" ? 3 : 1
+
+  name         = format("web-%s-%s", count.index, terraform.workspace)
+  machine_type = var.vm_size[terraform.workspace]
   zone         = "us-central1-a"
 
   boot_disk {
@@ -10,7 +13,7 @@ resource "google_compute_instance" "web" {
   }
 
   network_interface {
-    network = google_compute_network.vpc_network.self_link
+    network = "default"
 
     access_config {
       // Ephemeral public IP
