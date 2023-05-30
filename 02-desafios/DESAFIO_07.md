@@ -1,4 +1,4 @@
-# Desafio 07:
+# Desafio 07
 
 ## Utilizando worksapces
 
