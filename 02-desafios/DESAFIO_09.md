@@ -28,7 +28,12 @@ Sempre que necessário e possível utilize variáveis e estruras de laço para a
 
 #### Consumindo um módulo de intance
 
-5. Crie uma instâncias na subnet criada no item anterior consumindo o módulo de instancia que criamos no LAB08
+5. Crie uma instâncias na subnet criada no item anterior consumindo o módulo de instancia que criamos no DESAFIO08
+
+- Crie a instancia na zona `us-central1-a`
+- Use o output `network_name` do modulo da vpc para definir a subnet onde a instancia será criada;
+
+`Dica: por ser uma rede custom e não conseguirmos linkar diretamente a instancia à subnet, adicione uma entrada depends_on indicando que a instancia dependente do modulo de rede criado anteriormente`
 
 6. **Valide**, **Planeje** e **Aplique** as configuração alteradas/criadas até aqui, observe se os elementos foram criados na ordem correta obedecendo as dependências definidas.
 
