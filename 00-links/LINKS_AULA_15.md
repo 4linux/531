@@ -40,3 +40,8 @@ Esses são os recursos-chave do Terraform que você precisaria usar para criar u
 - [Google Compute Firewall](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall "Google Compute Firewall")
 - [Google Compute Instance Template](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance_template "Google Compute Instance Template")
 - [Google Compute Region Instance Group Manager](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_region_instance_group_manager "Google Compute Region Instance Group Manager")
+- [Google Compute Http Health Check](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_region_instance_group_manager "Google Compute Http Health Check")
+- [Google Compute Backend Service](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_region_instance_group_manager "Google Compute Backend Service")
+- [Google Compute Forwarind Rule](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_region_instance_group_manager "Google Compute Forwarind Rule")
+- [Google Compute Target Http Proxy](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_target_http_proxy "Google Compute Target Http Proxy")
+- [Google Compute URL Map](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_url_map "Google Compute URL Map")
