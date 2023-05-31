@@ -20,7 +20,7 @@ Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balancea
 
 Esses são os recursos-chave do Terraform que você precisaria usar para criar um ambiente GCP com um balanceador de carga que distribui o tráfego entre grupos de instâncias do Compute Engine usando o recurso `google_compute_region_instance_group_manager`. Você pode configurar esses recursos de acordo com seus requisitos específicos, como configuração de certificados SSL, afinidade de sessão ou outros recursos avançados de balanceamento de carga oferecidos pelo GCP.
 
-![gcp-load-balancer.png](./images/gcp-load-balancer.png)
+<div align="center">![gcp-load-balancer.png](./images/gcp-load-balancer.png)</div>
 
 #### DOC DE REFERÊNCIA
 
