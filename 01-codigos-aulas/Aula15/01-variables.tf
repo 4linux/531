@@ -1,5 +1,5 @@
 variable "vpc_name" {
-  type = string
+  type    = string
   default = "vpc-projeto"
 }
 
@@ -19,14 +19,20 @@ variable "back_provision_script" {
   description = "Caminho para o script de provisionamento"
 }
 
-variable "default_subnet_regions" {
+variable "group_regions" {
   type        = list(string)
   description = "Regioes padroes a serem criadas as subnets"
-  default     = ["us-central1", "southamerica-east1","us-east1"]
+  default     = ["asia-east1", "us-central1"]
 }
 
-variable "default_group_sizes" {
+variable "lb_group_sizes" {
   type        = list(number)
   description = "Regioes padroes a serem criadas as subnets"
-  default     = [0, 0, 2]
+  default     = [2, 0]
+}
+
+variable "us_zones" {
+  type        = list(string)
+  description = "Zonas onde as instancias serão provisionadas"
+  default     = ["us-central1-a", "us-central1-b"]
 }
