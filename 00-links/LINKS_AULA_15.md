@@ -1,93 +1,29 @@
-### Practice Labs - Lab 07
+# Project Time
 
-Project Time 01
+Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balanceador de carga para distribuir o tráfego entre grupos de instâncias do Compute Engine usando o Terraform, você precisaria usar os seguintes recursos do Terraform:
 
-Instruções:
+1. `google_compute_network`: Este recurso representa uma rede de nuvem virtual (VPC) do GCP. Você pode usá-lo para criar a rede onde suas instâncias residirão.
 
-Para cada laboratório, crie um novo diretório. Caso haja qualquer erro, leia atentamente o terminal.
+2. `google_compute_region_instance_group_manager`: Este recurso define um gerenciador de grupo de instâncias regional no GCP. Você criará vários gerenciadores de grupo de instâncias para distribuir sua carga de trabalho em diferentes regiões. Cada gerenciador de grupo de instâncias irá gerenciar um grupo de instâncias do Compute Engine que lidará com seu tráfego.
 
-Utilize referências implicitas e explicitas sempre que necessário.
+3. `google_compute_instance_template`: Este recurso permite que você defina um modelo para suas instâncias do Compute Engine. Você pode especificar propriedades da instância, como tipo de máquina, disco de inicialização, tags de rede, etc. Esse modelo será usado pelo gerenciador de grupo de instâncias para criar instâncias dentro do grupo gerenciado.
 
-A idéia durante o laboratório é criarmos a estrutura inicial do nosso projeto final, que basicamente vai definir uma nova rede, um modelo de instância e os instances groups.
+4. `google_compute_backend_service`: Este recurso representa um serviço de backend do balanceador de carga no GCP. Você criará um serviço de backend para definir o conjunto de gerenciadores de grupo de instâncias que lidarão com seu tráfego.
 
-Para agilizar a execução do LAB procure sempre reaproveitar códigos já escritos nos anteriores. Sempre que possível utilize variáveis e Meta-Arguments (`count` ou `for_each`) para automatizar e generalizar o código.
+5. `google_compute_health_check`: Este recurso define uma verificação de integridade para o balanceador de carga. Ele permite monitorar a saúde de suas instâncias e remover as instâncias não saudáveis ​​do pool de balanceamento de carga.
 
-Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempre o `terraform validate`, `terraform plan` para verificar a saída no output.
+6. `google_compute_target_pool`: Este recurso representa um pool de destino para o balanceador de carga. Você associará o serviço de backend ao pool de destino, que será o destino para o tráfego recebido.
 
-#### Preparando a primeira parte do projeto.
+7. `google_compute_http_health_check` ou `google_compute_tcp_health_check`: Dependendo do tipo de balanceador de carga que você deseja criar (HTTP ou TCP), você usará o recurso `google_compute_http_health_check` ou `google_compute_tcp_health_check` para definir as configurações de verificação de integridade específicas do protocolo.
 
-**- Na primeira parte** será criada a estrutura básica para comportar nossos ambientes as configurações do ambiente de network e firewall.
+8. `google_compute_forwarding_rule`: Este recurso define a regra de encaminhamento para o balanceador de carga. Ele especifica o endereço IP externo e a(s) porta(s) em que ouvirá o tráfego e encaminhará para o pool de destino.
 
-1. Crie um novo diretório com o nome PROJETOFINAL.
+Esses são os recursos-chave do Terraform que você precisaria usar para criar um ambiente GCP com um balanceador de carga que distribui o tráfego entre grupos de instâncias do Compute Engine usando o recurso `google_compute_region_instance_group_manager`. Você pode configurar esses recursos de acordo com seus requisitos específicos, como configuração de certificados SSL, afinidade de sessão ou outros recursos avançados de balanceamento de carga oferecidos pelo GCP.
 
-2. Defina uma vpc auto (criar redes automáticamente).
-
-3. Crie uma regra de firewall com o nome 'allow-default-ports' liberando o protocolo icmp e as portas TCP 22, 80, 443 para 0.0.0.0/0, para a VPC criada. Aplique uma **target_tag** com o nome `webapps`.
-
-**- Na segunda parte** serão criadas as definições de modelos de instância e de grupos de instâncias.
-
-4. Crie um instance template para ser utilizado no provisionamento das VMs (Dica: verifique a documentação do recurso `google_compute_instance_template`)
-- Defina que as VMs do template usem a rede gerenciada criado no passo 2.
-- Lembre-se de definir a TAG para que a regra de firewall seja aplicada;
-- Use a imagem `debian-cloud/debian-11`;
-- Aplique ao template o `metadata-startup-script` usando o script de provisionamento de backends;
-- Habilite o ip publico no template;
-
-5. Crie 3 instance groups, nas regiões `us-central1`, `us-east1` e `soutamerica-east1`, defina o **target_size** de cada instance group para **2** de modo que duas instâncias sejam criadas distribuídas entre as zonas de cada região.
-
-6. **Valide**, **Planeje** e **Aplique** as configuração alteradas/criadas até aqui, observe se os elementos foram criados na ordem correta obedecendo as dependências definidas.
-
-7. Via console acesse o endereço do ip público de cada instancia e confirme que o script de provisionamento, que faz o deploy de um index.html customizado foi aplicado com sucesso.
-
-8. Destrua todo o ambiente e valide que todos os elementos foram removidos via validação do state e também via console.
-
-`
-Obs: lembre-se de ao final destruir sua infraestrutura por questões de billing e manutenção sadia da sua free tier.
-`
+![gcp-load-balancer.png](./images/gcp-load-balancer.png)
 
 #### DOC DE REFERÊNCIA
 
 1. [GCP Network Module](https://registry.terraform.io/modules/terraform-google-modules/network "GCP Network Module")
 2. [Module Sources](https://www.terraform.io/language/modules/sources "Module Sources")
 ---
-
-### Practice Labs - Lab 10
-
-Criando e usando módulos locais
-
-Instruções:
-
-Para cada laboratório, crie um novo diretório. Caso haja qualquer erro, leia atentamente o terminal.
-
-Utilize referências implicitas e explicitas sempre que necessário.
-
-Aproveite parar fazer seus testes, todo novo recurso que for criado, faça sempre o `terraform validate`, `terraform plan` para verificar a saída no output.
-
-Sempre que necessário e possível utilize variáveis e estruras de laço para armazenar
-
-1. Crie um novo diretorio LAB10 e copie o arquivo provider.tf para esse diretório
-
-#### Consumindo um módulo de rede
-
-2. Crie uma VPC não gerenciada e duas subnets consumindo o modulo publico oficial da GCP no registry do terraform.
-- Crie as subnets com o mesmo nome da VPC para simplificar a implementação.
-- Cria as subnets nas regioes **us-central1** e **us-east1**
-- Definas as faixas **10.10.10.0/24** e **10.10.20.0/24** para as subnets, respectivamente.
-
-3. Consuma e exiba a saídas dos self_link, da VPC e das subnets.
-
-4. Crie uma regra de firewall liberando o protocolo icmp e a porta tcp/22 e 80 e associe a regra a VPC criada. A idéia é testar a interação entre módulos e recusos então crie a regra de firewall utilizando o *resource* `google_compute_firewall` fazendo o link com a VPC criada.
-
-#### Consumindo um módulo de intance
-
-5. Crie uma instâncias na subnet criada no item anterior consumindo o módulo de instancia que criamos no LAB08
-
-6. **Valide**, **Planeje** e **Aplique** as configuração alteradas/criadas até aqui, observe se os elementos foram criados na ordem correta obedecendo as dependências definidas.
-
-9. Valide que a infra foi criada com sucesso.
-
-10. Destrua a infra.
-
-`
-Obs: lembre-se de ao final destruir sua infraestrutura por questões de billing e manutenção sadia da sua free tier.
-`
