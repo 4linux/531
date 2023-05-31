@@ -38,3 +38,5 @@ Esses são os recursos-chave do Terraform que você precisaria usar para criar u
 
 - [Google Compute Network](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_network "Google Compute Network")
 - [Google Compute Firewall](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall "Google Compute Firewall")
+- [Google Compute Instance Template](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance_template "Google Compute Instance Template")
+- []()
