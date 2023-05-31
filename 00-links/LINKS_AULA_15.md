@@ -6,7 +6,7 @@
 
 </div>
 
-Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balanceador de carga para distribuir o tráfego entre grupos de instâncias do Compute Engine usando o Terraform, você precisaria usar os seguintes recursos do Terraform:
+Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balanceador de carga para distribuir o tráfego entre grupos de instâncias do Compute Engine usando o Terraform, você precisaria usar no mínimo seguintes recursos do Terraform:
 
 1. `google_compute_network`: Este recurso representa uma rede de nuvem virtual (VPC) do GCP. Você pode usá-lo para criar a rede onde suas instâncias residirão.
 
@@ -16,15 +16,15 @@ Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balancea
 
 4. `google_compute_region_instance_group_manager`: Este recurso define um gerenciador de grupo de instâncias regional no GCP. Você criará vários gerenciadores de grupo de instâncias para distribuir sua carga de trabalho em diferentes regiões. Cada gerenciador de grupo de instâncias irá gerenciar um grupo de instâncias do Compute Engine que lidará com seu tráfego.
 
-4. `google_compute_backend_service`: Este recurso representa um serviço de backend do balanceador de carga no GCP. Você criará um serviço de backend para definir o conjunto de gerenciadores de grupo de instâncias que lidarão com seu tráfego.
-
 5. `google_compute_health_check`: Este recurso define uma verificação de integridade para o balanceador de carga. Ele permite monitorar a saúde de suas instâncias e remover as instâncias não saudáveis ​​do pool de balanceamento de carga.
 
-6. `google_compute_target_pool`: Este recurso representa um pool de destino para o balanceador de carga. Você associará o serviço de backend ao pool de destino, que será o destino para o tráfego recebido.
+6. `google_compute_backend_service`: Este recurso representa um serviço de backend do balanceador de carga no GCP. Você criará um serviço de backend para definir o conjunto de gerenciadores de grupo de instâncias que lidarão com seu tráfego.
 
-7. `google_compute_http_health_check` ou `google_compute_tcp_health_check`: Dependendo do tipo de balanceador de carga que você deseja criar (HTTP ou TCP), você usará o recurso `google_compute_http_health_check` ou `google_compute_tcp_health_check` para definir as configurações de verificação de integridade específicas do protocolo.
+7. `google_compute_forwarding_rule`: Este recurso define a regra de encaminhamento para o balanceador de carga. Ele especifica o endereço IP externo e a(s) porta(s) em que ouvirá o tráfego e encaminhará para o pool de destino.
 
-8. `google_compute_forwarding_rule`: Este recurso define a regra de encaminhamento para o balanceador de carga. Ele especifica o endereço IP externo e a(s) porta(s) em que ouvirá o tráfego e encaminhará para o pool de destino.
+8. `google_compute_target_http_proxy`: Este recurso configura um proxy HTTP para encaminhamento de tráfego HTTP em um balanceador de carga. Ele permite definir as configurações de proxy, como os serviços de back-end associados e os encaminhamentos de tráfego.
+
+9. `google_compute_url_map`: Este recurso é utilizado para mapear URLs para serviços de back-end em um balanceador de carga. Ele define como as solicitações recebidas em um determinado URL devem ser roteadas para os serviços de back-end correspondentes.
 
 Esses são os recursos-chave do Terraform que você precisaria usar para criar um ambiente GCP com um balanceador de carga que distribui o tráfego entre grupos de instâncias do Compute Engine usando o recurso `google_compute_region_instance_group_manager`. Você pode configurar esses recursos de acordo com seus requisitos específicos, como configuração de certificados SSL, afinidade de sessão ou outros recursos avançados de balanceamento de carga oferecidos pelo GCP.
 
