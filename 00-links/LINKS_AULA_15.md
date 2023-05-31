@@ -12,9 +12,9 @@ Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balancea
 
 2. `google_compute_firewall`: Este recurso permite criar regras de firewall para controlar o tráfego de rede em suas instâncias do Compute Engine. Ele permite definir regras de firewall para controlar o tráfego de rede entre o load balancer e as instâncias do Compute Engine.
 
-2. `google_compute_region_instance_group_manager`: Este recurso define um gerenciador de grupo de instâncias regional no GCP. Você criará vários gerenciadores de grupo de instâncias para distribuir sua carga de trabalho em diferentes regiões. Cada gerenciador de grupo de instâncias irá gerenciar um grupo de instâncias do Compute Engine que lidará com seu tráfego.
-
 3. `google_compute_instance_template`: Este recurso permite que você defina um modelo para suas instâncias do Compute Engine. Você pode especificar propriedades da instância, como tipo de máquina, disco de inicialização, tags de rede, etc. Esse modelo será usado pelo gerenciador de grupo de instâncias para criar instâncias dentro do grupo gerenciado.
+
+4. `google_compute_region_instance_group_manager`: Este recurso define um gerenciador de grupo de instâncias regional no GCP. Você criará vários gerenciadores de grupo de instâncias para distribuir sua carga de trabalho em diferentes regiões. Cada gerenciador de grupo de instâncias irá gerenciar um grupo de instâncias do Compute Engine que lidará com seu tráfego.
 
 4. `google_compute_backend_service`: Este recurso representa um serviço de backend do balanceador de carga no GCP. Você criará um serviço de backend para definir o conjunto de gerenciadores de grupo de instâncias que lidarão com seu tráfego.
 
