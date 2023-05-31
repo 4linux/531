@@ -16,7 +16,7 @@ Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balancea
 
 4. `google_compute_region_instance_group_manager`: Este recurso define um gerenciador de grupo de instâncias regional no GCP. Você criará vários gerenciadores de grupo de instâncias para distribuir sua carga de trabalho em diferentes regiões. Cada gerenciador de grupo de instâncias irá gerenciar um grupo de instâncias do Compute Engine que lidará com seu tráfego.
 
-5. `google_compute_health_check`: Este recurso define uma verificação de integridade para o balanceador de carga. Ele permite monitorar a saúde de suas instâncias e remover as instâncias não saudáveis ​​do pool de balanceamento de carga.
+5. `google_compute_http_health_check` ou `google_compute_tcp_health_check`: Dependendo do tipo de balanceador de carga que você deseja criar (HTTP ou TCP), você usará o recurso `google_compute_http_health_check` ou `google_compute_tcp_health_check` para definir as configurações de verificação de integridade específicas do protocolo.
 
 6. `google_compute_backend_service`: Este recurso representa um serviço de backend do balanceador de carga no GCP. Você criará um serviço de backend para definir o conjunto de gerenciadores de grupo de instâncias que lidarão com seu tráfego.
 
