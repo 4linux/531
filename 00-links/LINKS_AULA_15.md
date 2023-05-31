@@ -34,8 +34,7 @@ Esses são os recursos-chave do Terraform que você precisaria usar para criar u
 
 </div>
 
-#### DOC DE REFERÊNCIA
+#### DOCS DE REFERÊNCIA
 
-1. [GCP Network Module](https://registry.terraform.io/modules/terraform-google-modules/network "GCP Network Module")
-2. [Module Sources](https://www.terraform.io/language/modules/sources "Module Sources")
----
+- [Google Compute Network](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_network "Google Compute Network")
+- [Google Compute Firewall](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall "Google Compute Firewall")
