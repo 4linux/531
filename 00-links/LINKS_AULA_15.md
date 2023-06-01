@@ -4,6 +4,10 @@
 
 ![gcp-load-balancer.png](./images/gcp-load-balancer.png)
 
+
+
+![gcp-load-balancer.png](./images/gcp-load-balancer.png)
+
 </div>
 
 Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balanceador de carga para distribuir o tráfego entre grupos de instâncias do Compute Engine usando o Terraform, você precisaria usar no mínimo seguintes recursos do Terraform:
