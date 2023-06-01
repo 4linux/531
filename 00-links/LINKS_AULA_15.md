@@ -26,6 +26,10 @@ Para criar um ambiente do Google Cloud Platform (GCP) que implementa um balancea
 
 9. `google_compute_url_map`: Este recurso é utilizado para mapear URLs para serviços de back-end em um balanceador de carga. Ele define como as solicitações recebidas em um determinado URL devem ser roteadas para os serviços de back-end correspondentes.
 
+```
+cp /tmp/ /home/anderson
+```
+
 Esses são os recursos-chave do Terraform que você precisaria usar para criar um ambiente GCP com um balanceador de carga que distribui o tráfego entre grupos de instâncias do Compute Engine usando o recurso `google_compute_region_instance_group_manager`. Você pode configurar esses recursos de acordo com seus requisitos específicos, como configuração de certificados SSL, afinidade de sessão ou outros recursos avançados de balanceamento de carga oferecidos pelo GCP.
 
 <div align="center">
