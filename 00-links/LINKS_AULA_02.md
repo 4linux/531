@@ -4,6 +4,12 @@
 
 ## IaC vs Configuration Management
 
+<div align="center">
+
+![cloud-provisioning-workflow](./images/cloud-provisioning-diagram.png)
+
+</div>
+
 - Configuration Management:
     - Ansible
     - Puppet
