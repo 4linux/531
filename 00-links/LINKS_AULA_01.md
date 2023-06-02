@@ -36,7 +36,11 @@ Vantagens do uso de IaC na nuvem:
 
 ## Imutabilidade da Infraestrutura
 
+<div align="center">
+
 ![mutable-vs-immutable](./images/mutable-vs-immutable.png)
+
+</div>
 
 #### DOC DE REFERÊNCIA TERRAFORM
 
