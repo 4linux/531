@@ -22,13 +22,13 @@ variable "back_provision_script" {
 variable "group_regions" {
   type        = list(string)
   description = "Regioes padroes a serem criadas as subnets"
-  default     = ["asia-east1", "us-central1"]
+  default     = ["us-central1", "asia-east1"]
 }
 
 variable "lb_group_sizes" {
   type        = list(number)
   description = "Regioes padroes a serem criadas as subnets"
-  default     = [2, 0]
+  default     = [0, 2]
 }
 
 variable "us_zones" {

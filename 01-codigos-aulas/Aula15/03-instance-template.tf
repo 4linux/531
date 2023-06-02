@@ -4,7 +4,7 @@ resource "google_compute_instance_template" "default" {
 
   tags = ["webapps"]
 
-  instance_description = "Instancia criada via template"
+  instance_description = "description assigned to instances"
   machine_type         = var.default_machine_type
 
   // Create a new boot disk from an image
@@ -18,10 +18,9 @@ resource "google_compute_instance_template" "default" {
     network = google_compute_network.vpc_projeto.self_link
 
     access_config {
-      // define ip externo
+
     }
-
   }
-
   metadata_startup_script = file(var.back_provision_script)
+
 }

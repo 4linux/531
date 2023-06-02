@@ -1,8 +1,8 @@
 resource "google_compute_http_health_check" "default" {
-  name               = "check-backend"
+  name               = "http-health-check"
   request_path       = "/"
-  check_interval_sec = 1
   timeout_sec        = 1
+  check_interval_sec = 1
 }
 
 resource "google_compute_backend_service" "default" {
@@ -18,10 +18,10 @@ resource "google_compute_backend_service" "default" {
   }
 
   backend {
-    group                 = google_compute_region_instance_group_manager.appserver-uscentral.instance_group
+    group                 = google_compute_region_instance_group_manager.appserver-us.instance_group
     balancing_mode        = "RATE"
     max_rate_per_instance = 1
   }
 
-  health_checks = [google_compute_http_health_check.default.self_link]
+  health_checks = [google_compute_http_health_check.default.id]
 }
