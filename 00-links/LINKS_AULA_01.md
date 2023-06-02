@@ -27,11 +27,11 @@ Vantagens do uso de IaC na nuvem:
 ## Vantagens do uso de Infrastructure as Code (IaC):
 
 - **Automatização**: Permite automatizar a criação e configuração da infraestrutura.
-- **Reprodutibilidade**: Possibilita reproduzir ambientes consistentemente em diferentes estágios do desenvolvimento.
 - **Agilidade**: Acelera a implantação da infraestrutura.
+- **Reprodutibilidade**: Possibilita reproduzir ambientes consistentemente em diferentes estágios do desenvolvimento.
+- **Consistência** e conformidade: Ajuda a garantir configurações consistentes e conformidade com requisitos.
 - **Rastreabilidade**: Permite rastrear e auditar alterações na infraestrutura.
 - **Colaboração**: Facilita a colaboração entre equipes de desenvolvimento e operações.
-- **Consistência** e conformidade: Ajuda a garantir configurações consistentes e conformidade com requisitos.
 - **Escalabilidade** e flexibilidade: Facilita a escalabilidade e a modificação da infraestrutura de acordo com as necessidades em mudança.
 
 ## Imutabilidade da Infraestrutura
