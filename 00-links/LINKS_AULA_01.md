@@ -47,3 +47,4 @@ Vantagens do uso de IaC na nuvem:
 - https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud
 - https://www.hashicorp.com/resources/what-is-infrastructure-as-code
 - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
+- https://www.techtarget.com/searchitoperations/definition/Infrastructure-as-Code-IAC
