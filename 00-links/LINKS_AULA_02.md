@@ -36,9 +36,13 @@ Core + Plugins + Provisioners
 
 - https://www.hashicorp.com/why
 - https://developer.hashicorp.com/terraform/intro
-- https://blog.4linux.com.br/teoria-do-terraform/
-- https://developer.hashicorp.com/terraform/plugin/how-terraform-works
 - https://developer.hashicorp.com/tutorials/library?product=terraform
+- https://blog.4linux.com.br/teoria-do-terraform/
 - https://gyro.dev/index.html
 - https://gyro.dev/guides/language/control-structures.html
+- https://www.pulumi.com/
+- https://cloudify.co/
+- https://landscape.cncf.io/
+- https://developer.hashicorp.com/terraform/plugin/how-terraform-works
+- https://developer.hashicorp.com/terraform/docs
 - 
