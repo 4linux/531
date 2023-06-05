@@ -20,7 +20,17 @@ O HashiCorp Terraform é uma ferramenta de infraestrutura como código (IaC) que
     - Chef
     - Saltstack
 
+## Outros IaCs
+
 ## 
+
+## Como funciona
+
+Core + Plugins + Provisioners
+
+## Documentação
+
+## Fluxo Padrão de Execução
 
 #### DOC DE REFERÊNCIA TERRAFORM
 
@@ -29,3 +39,6 @@ O HashiCorp Terraform é uma ferramenta de infraestrutura como código (IaC) que
 - https://blog.4linux.com.br/teoria-do-terraform/
 - https://developer.hashicorp.com/terraform/plugin/how-terraform-works
 - https://developer.hashicorp.com/tutorials/library?product=terraform
+- https://gyro.dev/index.html
+- https://gyro.dev/guides/language/control-structures.html
+- 
