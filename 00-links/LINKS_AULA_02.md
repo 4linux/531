@@ -43,6 +43,5 @@ Core + Plugins + Provisioners
 - https://www.pulumi.com/
 - https://cloudify.co/
 - https://landscape.cncf.io/
-- https://developer.hashicorp.com/terraform/plugin/how-terraform-works
 - https://developer.hashicorp.com/terraform/docs
-- 
+- https://developer.hashicorp.com/terraform/plugin/how-terraform-works
