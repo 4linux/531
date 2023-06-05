@@ -20,17 +20,15 @@ O HashiCorp Terraform é uma ferramenta de infraestrutura como código (IaC) que
     - Chef
     - Saltstack
 
-## Outros IaCs
-
-## 
-
 ## Como funciona
 
 Core + Plugins + Provisioners
 
-## Documentação
-
 ## Fluxo Padrão de Execução
+
+write .tf -> terraform init -> terraform plan -> terraform apply ~> terraform destroy
+
+write .tf ~> terraform fmt -> terraform init ~> terraform validate  -> terraform plan -> terraform apply ~> terraform destroy
 
 #### DOC DE REFERÊNCIA TERRAFORM
 
