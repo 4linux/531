@@ -1,6 +1,6 @@
 # INSTALANDO O TERRAFORM
 
-
+Para usar o Terraform, você precisará instalá-lo. A HashiCorp distribui o Terraform como um pacote binário. Você também pode instalar o Terraform usando gerenciadores de pacotes populares.
 
 ## DOC DE REFERÊNCIA TERRAFORM
 
