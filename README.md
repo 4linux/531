@@ -9,3 +9,7 @@
 | 3 | 8 <br> 9 <br> 10 | 14 <br> 13 <br> 8, 9 | Importando uma Infraestrutura Existente <br> Utilizando Backends <br> Locals + Variáveis: tipos primitivos + Outputs: tipos primitivos |
 | 4 | 11 <br> 12 | 8, 9 <br> 12 | Data Sources + Variáveis: tipos complexos + Outputs: tipos complexos <br> Trabalhando com diferentes environments 
 | 5 | 13 <br> 14 <br>  15| 10 <br> 11 <br> 15 | Escrevendo módulos <br> Utilizando Módulos Remotos <br> Contruindo a arquitetura final |
+
+### Referências
+
+- [Certification Terraform Associate](https://www.hashicorp.com/certification/terraform-associate "Certification Terraform Associate")
