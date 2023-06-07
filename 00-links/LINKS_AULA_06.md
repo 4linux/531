@@ -1,7 +1,6 @@
-#### ALTERANDO GRADATIVAMENTE SUA INFRAESTRUTURA
+# ALTERANDO GRADATIVAMENTE SUA INFRAESTRUTURA
 
-Como temos mais de 1 arquivo, o Terraform irá ler todos os arquivos .tf e irá executar cada um deles, mas não queremos isso neste momento, queremos criar recursos de forma um pouco mais controlada. 
-Um dos sub-comandos para o comando `terraform plan/apply/destroy` e o `-target`. 
+Quando temos mais de 1 arquivo no diretório raiz do Terraform, por padrão, ele irá ler todos os arquivos .tf e irá executar cada um deles. Caso queriramos realizar alterações nos recursos de forma um pouco mais controlada, podemos controlar o fluxo de execução do terraform através de um dos sub-comandos para o comando `terraform plan/apply/destroy` mais o parâmetro `-target`. 
 
 O comando tem a seguinte sintaxe:
 
