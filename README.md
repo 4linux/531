@@ -12,4 +12,6 @@
 
 ### Referências
 
+- [AIA](https://aia.4linux.com.br/ "AIA")
+- [VSCode](https://code.visualstudio.com/ "VisualStudio Code")
 - [Certification Terraform Associate](https://www.hashicorp.com/certification/terraform-associate "Certification Terraform Associate")
