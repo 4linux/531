@@ -1,5 +1,9 @@
 # Criando as configurações iniciais
 
+Para poder iniciar o provisionamento na GCP crie um projeto no Console do Google Cloud e configure o faturamento nesse projeto. Para fazer solicitações na API do GCP, você precisa se autenticar para provar que é você quem está fazendo a solicitação. O método preferencial de provisionamento de recursos com o Terraform em sua estação de trabalho é usar o SDK do Google Cloud, conforme mencionamos anteriormente.
+
+Você também pode usar uma conta de serviço do Google Cloud com terraform. Na página de chave da conta de serviço no Cloud Console, escolha uma conta existente ou crie uma nova. Em seguida, baixe o arquivo de chave JSON. Nomeie algo que você possa lembrar e armazene-o em algum lugar seguro em sua máquina.
+
 #### CRIANDO CHAVE PARA CONTA DE SERVICO NA GCP
 
 1. [Create Service Account](https://console.cloud.google.com/apis/credentials/serviceaccountkey "Create Service Account")
